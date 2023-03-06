@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href='gameoflife.css' />
+</head>
+
+<script src="https://unpkg.com/huebee@2/dist/huebee.pkgd.min.js"></script>
+<title>HI</title>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="test.html">HomePage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page " href="Gameoflife.html">Game Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="gameTheory.html">Game Theory</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Examples
+                </a>
+                        <ul class="dropdown-menu text-light">
+                            <li>
+                                <a class="dropdown-item" href="still.html">Still</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="oscillators.html">Oscillators</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="spaceship.html">Spaceships</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="fractal.html">Similar example</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="header">
+        Game of Life
+        <div class=" " id="gradient header "></div>
+    </div>
+
+    <div id="canvas">
+    </div>
+    <div class="container1">
+        <div class="Option">
+            <button onclick="removeline() ">remove borderline</button>
+            <button onclick="addLine() ">add borderline<br></button>
+            <button onclick="start() " class="play1 ">
+                play button
+                </button>
+            <button onclick="Stop()" class="stop2">
+            stop button
+            </button>
+            <button onclick="restart()">
+                restart here
+                </button>
+            <button onclick="randomBoxColor()">
+                    change  random color
+                    </button>
+            <div class="color-picker">
+                Pixel Color (change will be applied after restart/play)<input type="color" id="color_picker">
+            </div>
+
+        </div>
+
+        <div class="animate__animated animate__bounce rule_zone">
+            Speed : (default: 10 min: 0.5 Max: 5)
+            <div id="speedindex"></div>
+            <div class="slidecontainer" id="speedslider">
+                <input type="range" min="1" max="10" value="0" class="slider" id="myRange">
+            </div>
+            runtime
+            <input type="text" id="overpopulation" placeholder="Any but negiative value">
+            <div>
+                loneliness<input type="text" id="loneliness" placeholder="Any but negiative value" value="2">
+            </div>
+            Survial
+            <input type="text" id="Survival" placeholder=" Any but negiative value" value="3"> Reproduction
+            <input type="text" id="Reproduction" placeholder=" Any but negiative value" value="3">
+        </div>
+
+    </div>
+    <div class="lowerPart">
+        <div></div>
+    </div>
+
+
+
+    <div class="glow"></div>
+    <div class="flame  "></div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4 " crossorigin="anonymous ">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js "></script>
+    <script src="Gameoflife.js"></script>
+
+
+
+
+</body>
+
+<html>
+
+</html>

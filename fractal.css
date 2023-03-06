@@ -1,0 +1,11 @@
+.wikiFractal {
+    margin-left: 9px;
+    margin-top: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+.img1 {
+    display: flex;
+    justify-content: center;
+}
